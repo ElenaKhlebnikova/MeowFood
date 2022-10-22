@@ -1,0 +1,10 @@
+body {
+  background-color: rgb(37, 35, 35);
+  font-family: "Poppins", sans-serif;
+  color: rgb(37, 35, 35);
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}

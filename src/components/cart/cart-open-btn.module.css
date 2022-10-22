@@ -1,0 +1,56 @@
+.btnContainer {
+  position: absolute;
+  top: 20px;
+  right: 0px;
+  height: 100vh;
+}
+
+.btn {
+  position: sticky;
+  top: 30px;
+  border-radius: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  border: none;
+  background-color: transparent;
+  z-index: 100;
+}
+
+.icon {
+  margin: 0;
+  height: 40px;
+  width: 40px;
+  stroke-width: 10px;
+  fill: rgb(37, 35, 35);
+  background-color: rgba(255, 228, 196, 0.653);
+  padding: 8px;
+  border-radius: 100%;
+  position: relative;
+  transition: all ease-in 0.3s;
+}
+
+.number {
+  font-size: 16px;
+  top: 30px;
+  right: 42px;
+  width: 25px;
+  padding: 0px;
+  background-color: rgb(37, 35, 35);
+  color: bisque;
+  border-radius: 100%;
+  position: absolute;
+}
+
+.icon:hover {
+  fill: bisque;
+  cursor: pointer;
+  background-color: rgb(37, 35, 35);
+}
+
+.btnContainer {
+  display: flex;
+  flex-direction: column;
+}

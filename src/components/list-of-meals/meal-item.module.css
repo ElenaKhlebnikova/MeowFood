@@ -1,0 +1,70 @@
+.mealItemContainer {
+  width: 90%;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  padding: 20px;
+  border-bottom: 1px solid rgba(37, 35, 35);
+}
+
+.img {
+  width: 90%;
+  margin-right: 40px;
+  margin-top: 10px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.listItem {
+  list-style: none;
+}
+
+h3 {
+  font-size: 35px;
+  margin-bottom: 1px;
+}
+
+.description {
+  font-size: 20px;
+  margin-top: 2px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.priceContiner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.price {
+  font-weight: 600;
+  font-size: 25px;
+}
+
+.addToCartBtn {
+  height: 50%;
+  margin-top: 5px;
+  margin-right: 70px;
+  padding: 10px;
+  border: 2px solid bisque;
+  border-radius: 5px;
+  color: bisque;
+  transition: all ease-in 0.3s;
+  background-color: rgba(37, 35, 35, 0.568);
+  font-weight: 400;
+  font-size: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.addToCartBtn:hover {
+  color: rgb(222, 198, 169);
+  transform: scale(0.9);
+  cursor: pointer;
+}
+
+.addToCartBtn:active {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}

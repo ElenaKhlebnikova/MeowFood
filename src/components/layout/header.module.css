@@ -1,0 +1,21 @@
+.img {
+  position: relative;
+  height: 95vh;
+  width: 100%;
+  opacity: 0.6;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+  background-size: overlay;
+  background: linear-gradient(#2b2121, #85858c);
+}
+
+.container {
+  position: absolute;
+  font-size: 50px;
+  color: rgb(252, 238, 221);
+  z-index: 1;
+  font-family: "Poppins", sans-serif;
+  width: 40%;
+  top: 30%;
+  left: 5%;
+}

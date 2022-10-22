@@ -1,0 +1,87 @@
+.container {
+  position: absolute;
+  height: 75vh;
+  width: 70vw;
+  top: 50px;
+  right: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  background-color: rgb(37, 35, 35);
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: rgb(252, 238, 221);
+  border-radius: 5px;
+  border: 1px solid rgb(252, 238, 221);
+  overflow: scroll;
+}
+
+.btnClose {
+  border: none;
+  background-color: transparent;
+  transform: translateX(250%);
+  position: sticky;
+  top: 20px;
+}
+
+.btnIcon {
+  transition: all ease-in 0.3s;
+  fill: rgb(252, 238, 221);
+}
+.btnIcon:hover {
+  fill: rgb(207, 192, 175);
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.meals {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-left: 30px;
+}
+
+.content {
+  width: 95%;
+  height: 80%;
+
+  justify-content: space-between;
+  margin: 20px;
+
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(252, 238, 221);
+}
+
+.confirm {
+  position: sticky;
+  top: 350px;
+}
+
+.btnConfirm {
+  margin-top: 5px;
+  border: none;
+  color: rgb(252, 238, 221);
+  transition: all ease-in 0.3s;
+  background-color: transparent;
+  font-weight: 600;
+  font-size: 30px;
+}
+
+.btnConfirm:hover {
+  color: rgb(207, 192, 175);
+  transform: scale(1.1);
+  cursor: pointer;
+}

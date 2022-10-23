@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import catPic from "../../assets/Cat.jpg";
+
 import { useContext } from "react";
 import CartContext from "../context/cart-context";
 import styles from "./meal-item.module.css";
@@ -9,6 +9,7 @@ const MealItem = (props) => {
   const cartCtx = useContext(CartContext);
   const addToCart = (item) => {
     cartCtx.addItem({
+      img: item.img,
       id: item.id,
       name: item.name,
       price: item.price,
@@ -35,11 +36,7 @@ const MealItem = (props) => {
         </div>
       </div>
       <div className={styles.imgContainer}>
-        <img
-          className={styles.img}
-          src={catPic}
-          alt="random cat pic to be changed"
-        />
+        <img className={styles.img} src={props.img} alt="image of the meal" />
       </div>
     </div>
   );
@@ -50,6 +47,7 @@ MealItem.propTypes = {
   name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
+  img: PropTypes.string.isRequired,
 };
 
 export default MealItem;

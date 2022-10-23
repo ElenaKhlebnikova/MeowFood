@@ -15,7 +15,7 @@ const Cart = (props) => {
         id={cartIt.id}
         price={cartIt.price}
         amount={cartIt.amount}
-        key={Math.random()}
+        key={cartIt.id}
       />
     );
   });
@@ -41,7 +41,9 @@ const Cart = (props) => {
           </button>
           <div className={styles.confirm}>
             {items.length !== 0 && (
-              <div>Total amount: {cartCtx.totalAmount.toFixed(2)}$</div>
+              <div className={styles.total}>
+                Total amount: {cartCtx.totalAmount.toFixed(2)}$
+              </div>
             )}
             <div>
               {items.length !== 0 ? (

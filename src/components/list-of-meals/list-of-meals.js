@@ -1,41 +1,26 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import MealItem from "./meal-item";
 import styles from "./list-of-meals.module.css";
-const DUMMY_MEALS = [
-  {
-    id: "m1",
-    name: "Sushi",
-    description: "Finest fish and veggies",
-    price: 22.99,
-  },
-  {
-    id: "m2",
-    name: "Schnitzel",
-    description: "A german specialty!",
-    price: 16.5,
-  },
-  {
-    id: "m3",
-    name: "Barbecue Burger",
-    description: "American, raw, meaty",
-    price: 12.99,
-  },
-  {
-    id: "m4",
-    name: "Green Bowl",
-    description: "Healthy...and green...",
-    price: 18.99,
-  },
-];
 
 const ListOfMeals = () => {
-  const mealItems = DUMMY_MEALS.map((item) => (
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetch(`https://meals-api.onrender.com/api/meals`);
+      const newData = await response.json();
+      setData(newData);
+    };
+    fetchData();
+  }, []);
+
+  const mealItems = data.map((item) => (
     <MealItem
-      key={Math.random()}
-      id={item.id}
-      name={item.name}
-      description={item.description}
-      price={item.price}
+      img={item.strMealThumb}
+      key={item.idMeal}
+      id={item.idMeal}
+      name={item.strMeal}
+      description={item.strMeal}
+      price={+item.price}
     />
   ));
 

@@ -19,3 +19,17 @@
   top: 30%;
   left: 5%;
 }
+
+@media (max-width: 700px) {
+  .img {
+    object-fit: none;
+  }
+
+  .container {
+    font-size: 40px;
+    top: 20%;
+    margin-left: 20px;
+    overflow: hidden;
+    width: 80%;
+  }
+}

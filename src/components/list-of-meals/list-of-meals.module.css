@@ -6,7 +6,6 @@
 }
 
 .container {
-  background-color: rgba(255, 228, 196, 0.674);
   grid-column: 2/3;
   display: flex;
   flex-direction: column;
@@ -14,9 +13,28 @@
   margin-top: 100px;
 }
 
+.ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  column-gap: 30px;
+}
+
 @media (max-width: 700px) {
   .mainSection {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 10fr 1fr;
+  }
+  .ul {
+    margin-left: 0px;
+    display: grid;
+    grid-column: 1/3;
+    grid-template-columns: 1fr;
+    grid-gap: 0px;
   }
 }

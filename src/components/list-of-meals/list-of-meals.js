@@ -19,7 +19,6 @@ const ListOfMeals = () => {
       key={item.idMeal}
       id={item.idMeal}
       name={item.strMeal}
-      description={item.strMeal}
       price={+item.price}
     />
   ));
@@ -27,7 +26,7 @@ const ListOfMeals = () => {
   return (
     <div className={styles.mainSection}>
       <div className={styles.container}>
-        <ul>{mealItems}</ul>
+        <ul className={styles.ul}>{mealItems}</ul>
       </div>
     </div>
   );

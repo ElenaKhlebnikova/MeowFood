@@ -39,3 +39,16 @@
   font-size: 20px;
   font-weight: 400;
 }
+
+@media (max-width: 700px) {
+  .total {
+    font-size: 12px;
+  }
+  .price {
+    font-size: 10px;
+  }
+
+  .name {
+    font-size: 15px;
+  }
+}

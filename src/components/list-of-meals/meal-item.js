@@ -20,23 +20,20 @@ const MealItem = (props) => {
   return (
     <div className={styles.mealItemContainer}>
       <div className={styles.container}>
-        <li className={styles.listItem}>
-          <h3>{props.name}</h3>
-          <p className={styles.description}>{props.description}</p>
-        </li>
+        <h3>{props.name}</h3>
+
         <div className={styles.priceContiner}>
           <p className={styles.price}>{props.price}$</p>
-
-          <button
-            className={styles.addToCartBtn}
-            onClick={() => addToCart(props)}
-          >
-            Add To Cart
-          </button>
         </div>
       </div>
       <div className={styles.imgContainer}>
         <img className={styles.img} src={props.img} alt="image of the meal" />
+        <button
+          className={styles.addToCartBtn}
+          onClick={() => addToCart(props)}
+        >
+          Add to cart
+        </button>
       </div>
     </div>
   );
@@ -45,7 +42,6 @@ const MealItem = (props) => {
 MealItem.propTypes = {
   id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
   img: PropTypes.string.isRequired,
 };

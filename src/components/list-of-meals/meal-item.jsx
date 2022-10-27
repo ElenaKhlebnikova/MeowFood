@@ -1,10 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
-
 import { useContext } from "react";
 import CartContext from "../context/cart-context";
 import styles from "./meal-item.module.css";
-
+import { Link } from "react-router-dom";
 const MealItem = (props) => {
   const cartCtx = useContext(CartContext);
   const addToCart = (item) => {
@@ -23,6 +22,11 @@ const MealItem = (props) => {
         <h3>{props.name}</h3>
 
         <div className={styles.priceContiner}>
+          <Link to="/show-ingredients">
+            <button className={styles.ingredientsBtn}>
+              Ingredients &rarr;
+            </button>
+          </Link>
           <p className={styles.price}>{props.price}$</p>
         </div>
       </div>

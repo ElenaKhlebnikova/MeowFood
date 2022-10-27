@@ -34,13 +34,15 @@ h3 {
 
 .priceContiner {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
 }
 
 .price {
   font-weight: 600;
   font-size: 25px;
+  margin: 8px 0px;
 }
 
 .addToCartBtn {
@@ -61,6 +63,16 @@ h3 {
 
 .imgContainer {
   display: grid;
+}
+
+.ingredientsBtn {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+.ingredientsBtn:hover {
+  cursor: pointer;
 }
 
 .addToCartBtn:hover {

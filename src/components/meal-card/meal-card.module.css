@@ -1,0 +1,25 @@
+.test {
+  width: 60vw;
+  height: 60vh;
+  background-color: rgb(37, 35, 35);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.back {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 10;
+}
+
+.name {
+  color: rgb(232, 252, 20);
+  z-index: 11;
+}

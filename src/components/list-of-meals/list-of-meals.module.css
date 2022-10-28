@@ -5,6 +5,12 @@
   grid-template-columns: 1fr 8fr 1fr;
 }
 
+.select {
+  position: absolute;
+  top: 100%;
+  left: 25%;
+}
+
 .container {
   grid-column: 2/3;
   display: flex;

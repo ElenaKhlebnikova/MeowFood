@@ -15,7 +15,7 @@ const App = () => {
     <CartProvider>
       <BrowserRouter>
         <Routes>
-          <Route path="/show-ingredients" element={<MealCard />} />
+          <Route path="/:id" element={<MealCard />} />
         </Routes>
         <Header />
         <CartBtnOpen onClick={() => setCartIsShown(true)} />

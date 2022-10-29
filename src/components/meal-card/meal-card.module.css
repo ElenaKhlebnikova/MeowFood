@@ -47,6 +47,7 @@ svg {
   background: none;
   color: bisque;
   margin-left: 15px;
+  border: none;
 }
 .back:hover {
   cursor: pointer;
@@ -86,5 +87,21 @@ svg {
   display: flex;
 
   align-items: center;
-  justify-content: center;
+  justify-content: start;
+}
+
+@media (max-width: 950px) {
+  .ingContainer {
+    grid-template-columns: 1fr;
+  }
+  .genInfo {
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .mealCard {
+    width: 100vw;
+    height: 100vh;
+  }
 }

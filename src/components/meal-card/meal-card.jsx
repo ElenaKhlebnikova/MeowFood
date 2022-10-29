@@ -1,31 +1,41 @@
 /* eslint-disable react/no-unknown-property */
 import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 import { useNavigate, useParams } from "react-router-dom";
 
 // import CartContext from "../context/cart-context";
 import { ReactComponent as GlobeIcon } from "./../../assets/svg_globe.svg";
 import { ReactComponent as MealIcon } from "./../../assets/svg_meal.svg";
+import { ReactComponent as ErrorIcon } from "./../../assets/svg_error.svg";
 import styles from "./meal-card.module.css";
 
 const MealCard = () => {
   let navigate = useNavigate();
   const { id } = useParams();
 
-  console.log(id);
-
   const [data, setData] = useState([]);
+  const [loadingState, setLoadingState] = useState(false);
+  const [error, setError] = useState(false);
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch(
-        `https://meals-api.onrender.com/api/meals/${id}`
-      );
-      const newData = await response.json();
-      setData(newData);
+      try {
+        setLoadingState(true);
+        const response = await axios.get(
+          `https://meals-api.onrender.com/api/meals/${id}`
+        );
+
+        setData(response.data);
+        setLoadingState(false);
+      } catch {
+        setError(true);
+
+        console.error("Failed to load");
+      }
     };
     fetchData();
   }, []);
-  console.log(data);
+
   const item = {
     img: data.strMealThumb,
     id: +data.idMeal,
@@ -62,6 +72,24 @@ const MealCard = () => {
     } else return;
   });
 
+  console.log(loadingState, error);
+
+  if (loadingState) {
+    return (
+      <div className={styles.background}>
+        <div className={styles.loadingSpinner}></div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className={styles.background}>
+        <ErrorIcon className={styles.error} />
+      </div>
+    );
+  }
+  // setLoadingState(true);
   return (
     <div className={styles.background}>
       <div

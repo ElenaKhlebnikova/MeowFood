@@ -6,7 +6,7 @@
   right: 50%;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 1;
+  z-index: 2;
   background-color: rgb(37, 35, 35);
   font-family: "Poppins", sans-serif;
   font-weight: 400;
@@ -17,12 +17,15 @@
   overflow: scroll;
 }
 
+.btnContainer {
+  margin: 0;
+  position: sticky;
+  top: 20px;
+}
 .btnClose {
   border: none;
   background-color: transparent;
   transform: translateX(250%);
-  position: sticky;
-  top: 20px;
 }
 
 .btnIcon {
@@ -86,11 +89,27 @@
   cursor: pointer;
 }
 
+@media (max-width: 1200px) {
+  .btnClose {
+    transform: translateX(200%);
+  }
+}
+
+@media (max-width: 1020px) {
+  .btnContainer {
+    position: fixed;
+    top: 10px;
+    left: 45vw;
+  }
+}
+
 @media (max-width: 700px) {
   .container {
     position: fixed;
     display: flex;
     flex-direction: column;
+    display: grid;
+
     height: 100vh;
     width: 100vw;
     top: 0;
@@ -98,6 +117,22 @@
     transform: translateX(0);
     font-size: 15px;
   }
+
+  .content {
+    grid-template-columns: 5fr 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .btnContainer {
+    position: fixed;
+    top: 10px;
+    left: -25px;
+  }
+
+  .btnIcon {
+    margin: 0;
+  }
+
   @media (max-width: 400px) {
   }
   .btnConfirm {

@@ -43,34 +43,28 @@ const MealCard = () => {
     area: data.strArea,
     category: data.strCategory,
     ingredients: Array(
-      data.strIngredient1 + " ",
-      data.strIngredient2 + " ",
-      data.strIngredient3 + " ",
-      data.strIngredient4 + " ",
-      data.strIngredient5 + " ",
-      data.strIngredient6 + " ",
-      data.strIngredient7 + " ",
-      data.strIngredient8 + " ",
-      data.strIngredient9 + " ",
-      data.strIngredient10 + " ",
-      data.strIngredient11 + " ",
-      data.strIngredient12 + " ",
-      data.strIngredient13 + " ",
-      data.strIngredient14 + " ",
-      data.strIngredient15 + " ",
-      data.strIngredient16 + " ",
-      data.strIngredient17 + " ",
-      data.strIngredient18 + " ",
-      data.strIngredient19 + " ",
-      data.strIngredient20 + " "
+      data.strIngredient1,
+      data.strIngredient2,
+      data.strIngredient3,
+      data.strIngredient4,
+      data.strIngredient5,
+      data.strIngredient6,
+      data.strIngredient7,
+      data.strIngredient8,
+      data.strIngredient9,
+      data.strIngredient10,
+      data.strIngredient11,
+      data.strIngredient12,
+      data.strIngredient13,
+      data.strIngredient14,
+      data.strIngredient15,
+      data.strIngredient16,
+      data.strIngredient17,
+      data.strIngredient18,
+      data.strIngredient19,
+      data.strIngredient20
     ),
   };
-
-  const ing = item.ingredients.map((el) => {
-    if (el.valueOf() !== " " && el.valueOf() !== null) {
-      return <li key={Math.random()}>{el}</li>;
-    } else return;
-  });
 
   if (loadingState) {
     return (
@@ -87,6 +81,21 @@ const MealCard = () => {
       </div>
     );
   }
+  let ingr = [];
+  const ingArray = item.ingredients
+    .filter((ingr) => ingr !== "" && ingr !== null)
+    .map((el) => {
+      if (el !== undefined) {
+        ingr.push(el);
+      }
+    });
+
+  let ingArr = ingr.map(
+    (el) =>
+      String(el).charAt(0).toUpperCase() + String(el).slice(1).toLowerCase()
+  );
+
+  console.log(ingArray);
   return (
     <div className={styles.background}>
       <div
@@ -124,7 +133,11 @@ const MealCard = () => {
           </div>
 
           <div className={styles.ingredients}>
-            <ul>{ing}</ul>
+            <ul>
+              {ingArr.map((el) => (
+                <li key={el}>{el}</li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>

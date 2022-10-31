@@ -46,10 +46,8 @@ const Cart = (props) => {
               </div>
             )}
             <div>
-              {items.length !== 0 ? (
+              {items.length !== 0 && (
                 <button className={styles.btnConfirm}>Continue order</button>
-              ) : (
-                ""
               )}
             </div>
           </div>

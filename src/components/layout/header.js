@@ -19,6 +19,7 @@ const Header = () => {
 
     return mainPic;
   };
+
   return (
     <div>
       <div className={styles.container}>

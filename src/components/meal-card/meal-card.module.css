@@ -67,9 +67,7 @@ svg {
 }
 
 .name {
-  position: absolute;
-  top: 10%;
-  left: 5%;
+  margin-left: 20px;
   font-size: 30px;
   color: bisque;
 }

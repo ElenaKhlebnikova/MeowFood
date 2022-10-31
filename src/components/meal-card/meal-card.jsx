@@ -1,10 +1,6 @@
-/* eslint-disable react/no-unknown-property */
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-
 import { useNavigate, useParams } from "react-router-dom";
-
-// import CartContext from "../context/cart-context";
 import { ReactComponent as GlobeIcon } from "./../../assets/svg_globe.svg";
 import { ReactComponent as MealIcon } from "./../../assets/svg_meal.svg";
 import { ReactComponent as ErrorIcon } from "./../../assets/svg_error.svg";
@@ -17,6 +13,10 @@ const MealCard = () => {
   const [data, setData] = useState([]);
   const [loadingState, setLoadingState] = useState(false);
   const [error, setError] = useState(false);
+
+  // extract data fetching, loading state and error handling into a custom hook called useMealFetcher
+  // const {data, isLoading, error} = useMealFetcher()
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -67,12 +67,10 @@ const MealCard = () => {
   };
 
   const ing = item.ingredients.map((el) => {
-    if (el.valueOf() !== " ") {
+    if (el.valueOf() !== " " && el.valueOf() !== null) {
       return <li key={Math.random()}>{el}</li>;
     } else return;
   });
-
-  console.log(loadingState, error);
 
   if (loadingState) {
     return (
@@ -89,7 +87,6 @@ const MealCard = () => {
       </div>
     );
   }
-  // setLoadingState(true);
   return (
     <div className={styles.background}>
       <div

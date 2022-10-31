@@ -4,6 +4,7 @@ import { useContext } from "react";
 import CartContext from "../context/cart-context";
 import styles from "./meal-item.module.css";
 import { Link } from "react-router-dom";
+
 const MealItem = (props) => {
   const cartCtx = useContext(CartContext);
   const addToCart = (item) => {

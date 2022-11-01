@@ -23,7 +23,7 @@ const MealItem = (props) => {
         <h3>{props.name}</h3>
 
         <div className={styles.priceContiner}>
-          <Link to={`/${props.id}`}>
+          <Link to={`meals/${props.id}`}>
             <button className={styles.ingredientsBtn}>
               Ingredients &rarr;
             </button>

@@ -1,18 +1,12 @@
 import React, { useEffect, useState } from "react";
 import MealItem from "./meal-item";
 import styles from "./list-of-meals.module.css";
-
+import useMealFetcher from "../use-fetch-hook";
+import Loading from "../loading-error/loading";
+import Error from "../loading-error/error";
 const ListOfMeals = () => {
-  const [data, setData] = useState([]);
-  useEffect(() => {
-    const fetchData = async () => {
-      const response = await fetch(`https://meals-api.onrender.com/api/meals`);
-      const newData = await response.json();
-      setData(newData);
-    };
-    fetchData();
-  }, []);
-
+  const { data, isLoading, error } = useMealFetcher("");
+  console.log(data);
   const [selected, setSelect] = useState("No category");
 
   const handleSelect = (e) => {
@@ -25,7 +19,7 @@ const ListOfMeals = () => {
         <label htmlFor="category">Select a category:</label>
 
         <select name="category" id="category" onChange={handleSelect}>
-          <option value="No category">-</option>
+          <option value="No category">No category</option>
           <option value="Breakfast">Breakfast</option>
           <option value="Vegan">Vegan</option>
           <option value="Vegetarian">Vegetarian</option>
@@ -34,6 +28,12 @@ const ListOfMeals = () => {
       <div className={styles.mainSection}>
         <div className={styles.container}>
           <ul className={styles.ul}>
+            {isLoading && (
+              <div className={styles.loadingContainer}>
+                <Loading />
+              </div>
+            )}
+            {error && <Error />}
             {data
               .filter(
                 (item) =>

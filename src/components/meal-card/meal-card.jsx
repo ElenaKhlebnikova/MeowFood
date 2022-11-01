@@ -1,40 +1,19 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import React from "react";
+import useMealFetcher from "../use-fetch-hook";
 import { useNavigate, useParams } from "react-router-dom";
 import { ReactComponent as GlobeIcon } from "./../../assets/svg_globe.svg";
 import { ReactComponent as MealIcon } from "./../../assets/svg_meal.svg";
-import { ReactComponent as ErrorIcon } from "./../../assets/svg_error.svg";
 import styles from "./meal-card.module.css";
 
+import Loading from "./../loading-error/loading";
+import Error from "./../loading-error/loading";
 const MealCard = () => {
   let navigate = useNavigate();
   const { id } = useParams();
 
-  const [data, setData] = useState([]);
-  const [loadingState, setLoadingState] = useState(false);
-  const [error, setError] = useState(false);
-
   // extract data fetching, loading state and error handling into a custom hook called useMealFetcher
-  // const {data, isLoading, error} = useMealFetcher()
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        setLoadingState(true);
-        const response = await axios.get(
-          `https://meals-api.onrender.com/api/meals/${id}`
-        );
-
-        setData(response.data);
-        setLoadingState(false);
-      } catch {
-        setError(true);
-
-        console.error("Failed to load");
-      }
-    };
-    fetchData();
-  }, []);
+  const { data, error, isLoading } = useMealFetcher(id);
 
   const item = {
     img: data.strMealThumb,
@@ -66,23 +45,8 @@ const MealCard = () => {
     ),
   };
 
-  if (loadingState) {
-    return (
-      <div className={styles.background}>
-        <div className={styles.loadingSpinner}></div>
-      </div>
-    );
-  }
-
-  if (error) {
-    return (
-      <div className={styles.background}>
-        <ErrorIcon className={styles.error} />
-      </div>
-    );
-  }
   let ingr = [];
-  const ingArray = item.ingredients
+  item.ingredients
     .filter((ingr) => ingr !== "" && ingr !== null)
     .map((el) => {
       if (el !== undefined) {
@@ -95,7 +59,22 @@ const MealCard = () => {
       String(el).charAt(0).toUpperCase() + String(el).slice(1).toLowerCase()
   );
 
-  console.log(ingArray);
+  if (isLoading) {
+    return (
+      <div className={styles.background}>
+        <Loading />
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className={styles.background}>
+        <Error />
+      </div>
+    );
+  }
+
   return (
     <div className={styles.background}>
       <div

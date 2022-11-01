@@ -25,22 +25,26 @@
 select {
   background-color: rgb(37, 35, 35);
   color: bisque;
-  width: 50%;
+
   text-align: center;
   border: bisque;
   border-radius: 3px;
   font-size: 20px;
 }
-
+.select {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
 label {
   margin-right: 10px;
-  font-size: 25px;
+  font-size: 20px;
+  width: 100%;
 }
 option {
   background-color: rgb(37, 35, 35);
   color: bisque;
   padding: 5px;
-  width: 60%;
+  width: 100%;
 }
 .container {
   grid-column: 2/3;
@@ -53,8 +57,12 @@ option {
 .ul {
   display: grid;
   grid-template-columns: 1fr 1fr;
-
   column-gap: 30px;
+}
+
+.loadingContainer {
+  height: 200px;
+  width: 200px;
 }
 
 @media (max-width: 700px) {

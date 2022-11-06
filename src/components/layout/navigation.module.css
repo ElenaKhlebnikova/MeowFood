@@ -1,16 +1,28 @@
 .nav {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  width: 99vw;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  width: 100vw;
   justify-items: center;
   margin-bottom: 50px;
+  position: fixed;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.573);
+  align-items: center;
+  justify-items: start;
+}
+
+.logo {
+  height: 50px;
+  opacity: 0.95;
+  margin-left: 20px;
+  margin-top: 10px;
 }
 
 .navBtn {
   font-size: 20px;
   color: bisque;
   border: none;
-  border-bottom: solid 0.5px bisque;
+
   background-color: transparent;
   outline: none;
 }

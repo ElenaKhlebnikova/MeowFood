@@ -1,0 +1,31 @@
+.footerContainer {
+  width: 100%;
+  margin-top: 60px;
+  height: 40vh;
+  opacity: 0.9;
+  background-position: top;
+  clip-path: polygon(0 32%, 100% 0%, 100% 100%, 0% 100%);
+  background-size: overlay;
+  background: linear-gradient(rgb(149, 133, 113), bisque);
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  align-items: center;
+  justify-items: end;
+}
+
+.iconContainer {
+  align-self: center;
+}
+.text {
+  color: rgba(37, 35, 35);
+  font-size: 30px;
+  margin-top: 100px;
+}
+
+.icon {
+  fill: rgba(37, 35, 35);
+}
+.iconLink {
+  fill: rgba(37, 35, 35);
+  height: 100px;
+}

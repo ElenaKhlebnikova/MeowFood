@@ -10,21 +10,25 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navigation from "./components/layout/navigation";
 import Rating from "./components/navigation-items/rating";
 import AboutUs from "./components/navigation-items/about-us";
+import Footer from "./components/layout/footer";
+import styles from "./App.module.css";
 const App = () => {
   const [cartIsShown, setCartIsShown] = useState(false);
 
   return (
     <CartProvider>
       <BrowserRouter>
-        <Header />
-        <Navigation />
-        <Routes>
-          <Route path="/meals" element={<ListOfMeals />} />
-          <Route path="/meals/:id" element={<MealCard />} />
-          <Route path="/about" element={<AboutUs />} />
-          <Route path="/rating" element={<Rating />} />
-        </Routes>
-
+        <div className={styles.main}>
+          <Header />
+          <Navigation />
+          <Routes>
+            <Route path="/meals" element={<ListOfMeals />} />
+            <Route path="/meals/:id" element={<MealCard />} />
+            <Route path="/about" element={<AboutUs />} />
+            <Route path="/rating" element={<Rating />} />
+          </Routes>
+          <Footer />
+        </div>
         <CartBtnOpen onClick={() => setCartIsShown(true)} />
         {cartIsShown && <Cart onClick={() => setCartIsShown(false)} />}
       </BrowserRouter>

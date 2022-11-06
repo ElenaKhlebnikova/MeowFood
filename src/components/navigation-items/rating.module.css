@@ -2,8 +2,142 @@
   width: 90%;
   display: grid;
   grid-template-columns: 2fr 1fr;
-
+  margin-top: 150px;
   padding: 20px;
   border-bottom: 1px solid rgba(37, 35, 35);
   background-color: rgba(255, 228, 196, 0.674);
+  grid-column: 2/3;
+  border-radius: 5px;
+}
+
+.mainSection {
+  width: 100%;
+  background-color: rgb(37, 35, 35);
+  display: grid;
+  grid-template-columns: 1fr 15fr 1fr;
+}
+
+.formContainer {
+  display: grid;
+  grid-template-rows: 0.5fr 0.5fr 3fr 1fr;
+  row-gap: 10px;
+  width: 80%;
+}
+
+.form {
+  display: grid;
+  grid-template-rows: 1fr 2fr 1fr;
+  row-gap: 20px;
+}
+
+.name {
+  display: flex;
+  flex-direction: column;
+}
+
+.questionContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.question {
+  padding: 5px 5px 100px 5px;
+}
+
+input {
+  background-color: rgba(37, 35, 35, 0.568);
+  border: none;
+  border-radius: 3px;
+  color: rgb(253, 240, 224);
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+
+.nameInput {
+  padding: 5px;
+}
+
+.btn {
+  margin-top: 20px;
+  height: 50px;
+  width: 20%;
+  justify-self: end;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  color: bisque;
+  transition: all ease-in 0.3s;
+  background-color: rgba(37, 35, 35, 0.568);
+  font-weight: 400;
+  font-size: 15px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.btnInactive {
+  margin-top: 20px;
+  height: 50px;
+  width: 20%;
+  justify-self: end;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  color: bisque;
+  font-weight: 400;
+  font-size: 15px;
+  background-color: rgba(111, 107, 107, 0.568);
+  cursor: not-allowed;
+}
+
+.btn:hover {
+  color: rgb(222, 198, 169);
+  transform: scale(0.97);
+  cursor: pointer;
+}
+
+.btn:active {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+input {
+  margin: 0;
+  border-radius: 3px;
+  outline: none;
+}
+
+.span {
+  font-size: 15px;
+  color: rgb(127, 58, 74);
+  font-weight: 600;
+}
+
+.pawIcon {
+  font-size: 50px;
+  fill: rgba(37, 35, 35);
+  height: 50px;
+}
+
+.pawIconSelected {
+  font-size: 50px;
+  height: 50px;
+  fill: rgb(127, 58, 74);
+}
+
+.ratingList {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.btnPaw {
+  background: none;
+  border: none;
+  border-radius: 100%;
+  width: 50%;
+}
+
+.pawIcon:hover {
+  fill: rgb(127, 58, 74);
+}
+
+.btnPaw:hover {
+  cursor: pointer;
 }

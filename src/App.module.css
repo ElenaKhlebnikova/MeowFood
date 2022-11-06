@@ -8,3 +8,8 @@ body {
 * {
   box-sizing: border-box;
 }
+
+.main {
+  position: relative;
+  height: 100vh;
+}

@@ -6,8 +6,6 @@ const useMealFetcher = (id) => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(false);
 
-  const meow = "l";
-
   useEffect(() => {
     const fetchData = async () => {
       try {

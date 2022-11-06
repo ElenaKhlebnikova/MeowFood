@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import MealItem from "./meal-item";
 import styles from "./list-of-meals.module.css";
 import useMealFetcher from "../use-fetch-hook";

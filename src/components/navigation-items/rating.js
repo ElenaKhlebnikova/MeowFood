@@ -8,7 +8,7 @@ const Rating = () => {
   const [name, setName] = useState("");
   const [comment, setComment] = useState("");
   const [rating, setRating] = useState(0);
-  const [feedback, setFeedback] = useState([
+  const [feedback] = useState([
     {
       name: "Yahia",
       comment: "Meow meow meow woof woof woof!",

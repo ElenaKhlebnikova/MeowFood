@@ -6,7 +6,7 @@ import Loading from "../loading-error/loading";
 import Error from "../loading-error/error";
 const ListOfMeals = () => {
   const { data, isLoading, error } = useMealFetcher("");
-  console.log(data);
+
   const [selected, setSelect] = useState("No category");
 
   const handleSelect = (e) => {
@@ -27,13 +27,18 @@ const ListOfMeals = () => {
       </div>
       <div className={styles.mainSection}>
         <div className={styles.container}>
-          <ul className={styles.ul}>
+          <ul className={isLoading || error ? styles.ulLoading : styles.ul}>
             {isLoading && (
               <div className={styles.loadingContainer}>
                 <Loading />
               </div>
             )}
-            {error && <Error />}
+            {error && (
+              <div>
+                <Error />
+                <h3 className={styles.errorText}>Something went wrong...</h3>
+              </div>
+            )}
             {data
               .filter(
                 (item) =>

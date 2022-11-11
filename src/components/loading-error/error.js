@@ -6,7 +6,6 @@ const Error = () => {
   return (
     <div>
       <ErrorIcon className={styles.error} />
-      <h3>Sonething went wrong...</h3>
     </div>
   );
 };

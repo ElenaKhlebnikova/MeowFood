@@ -59,9 +59,15 @@ option {
   column-gap: 30px;
 }
 
-.loadingContainer {
-  height: 200px;
-  width: 200px;
+.ulLoading {
+  display: flex;
+  justify-content: center;
+}
+
+.errorText {
+  color: bisque;
+  display: flex;
+  justify-content: center;
 }
 
 @media (max-width: 700px) {

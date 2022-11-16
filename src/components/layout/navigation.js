@@ -9,7 +9,7 @@ const Navigation = () => {
   const height = window.innerHeight;
   const [menuIsOpen, setMenuIsOpen] = useState(false);
   const { device } = useMediaQueryHook();
-  console.log(device);
+
   const handleOpenMenu = () => {
     if (menuIsOpen) {
       setMenuIsOpen(false);
@@ -37,13 +37,24 @@ const Navigation = () => {
           </div>
           {menuIsOpen && (
             <div className={styles.hamburderMenu}>
-              <div>
-                <img
-                  src={mainLogo}
-                  alt="meow food logo"
-                  className={styles.logoSmallScreen}
-                />
+              <div className={styles.headerMobileMenu}>
+                <div>
+                  <img
+                    src={mainLogo}
+                    alt="meow food logo"
+                    className={styles.logoSmallScreen}
+                  />
+                </div>
+                <div>
+                  <button
+                    className={styles.navBtn}
+                    onClick={() => setMenuIsOpen(false)}
+                  >
+                    X
+                  </button>
+                </div>
               </div>
+
               <div className={styles.navOption}>
                 <Link to="/about">
                   <button onClick={handleOpenMenu} className={styles.navBtn}>
@@ -70,7 +81,7 @@ const Navigation = () => {
         </>
       )}
 
-      {device === SIZES.BIG_DESKTOP && (
+      {(device === SIZES.DESKTOP) | (device === SIZES.BIG_DESKTOP) && (
         <div className={styles.nav}>
           <div>
             <img src={mainLogo} alt="meow food logo" className={styles.logo} />

@@ -2,7 +2,9 @@ import styles from "./rating.module.css";
 import React, { useState } from "react";
 import uuid from "react-uuid";
 import { FaPaw } from "react-icons/fa";
+import useMediaQueryHook, { SIZES } from "../media-query-hook";
 const Rating = () => {
+  const { device } = useMediaQueryHook();
   const [invalidName, setInvalidName] = useState(false);
   const [invalidComment, setInvalidComment] = useState(false);
   const [name, setName] = useState("");
@@ -199,7 +201,8 @@ const Rating = () => {
             />
           </form>
         </div>
-        <div className={styles.feedbckContainer}>
+
+        <div>
           <div>Average rating: {averageRating()}</div>
           {feedback.map((item) => (
             <div className={styles.feedbackItem} key={item.id}>

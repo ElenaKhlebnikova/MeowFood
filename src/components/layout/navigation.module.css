@@ -16,9 +16,8 @@
   flex-direction: column;
   width: 100vw;
   height: 100vh;
-  justify-content: center;
   align-items: center;
-  margin-bottom: 50px;
+  margin-bottom: 150px;
   position: fixed;
   top: 0;
   background-color: rgba(37, 35, 35);
@@ -35,11 +34,6 @@
 
 .logoSmallScreen {
   height: 50px;
-  opacity: 0.95;
-  position: absolute;
-  top: 10px;
-  right: 50%;
-  transform: translateX(50%);
 }
 
 .navBtn {
@@ -68,7 +62,7 @@
   font-weight: 400;
   border: none;
   background-color: transparent;
-  z-index: 100;
+  z-index: 98;
 }
 
 .icon {
@@ -82,4 +76,16 @@
   border-radius: 100%;
   position: relative;
   transition: all ease-in 0.3s;
+}
+
+.headerMobileMenu {
+  display: grid;
+  grid-template-columns: 10fr 1fr;
+  column-gap: 50px;
+
+  margin-bottom: 150px;
+  margin-top: 50px;
+  align-self: center;
+  justify-items: center;
+  justify-self: center;
 }

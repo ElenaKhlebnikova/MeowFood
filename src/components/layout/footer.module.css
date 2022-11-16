@@ -29,3 +29,9 @@
   fill: rgba(37, 35, 35);
   height: 100px;
 }
+
+@media (max-width: 850px) {
+  .footerContainer {
+    height: 25vh;
+  }
+}

@@ -12,7 +12,7 @@ const useMealFetcher = (id) => {
         setIsLoading(true);
 
         const response = await axios.get(
-          ` https://meals-api-orp5axas6q-ew.a.run.app/api/meals/${id}`
+          ` https://meals-api-gnwsbsmsja-ew.a.run.app/api/meals/${id}`
         );
 
         setData(response.data);

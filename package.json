@@ -24,7 +24,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --transformIgnorePatterns \"node_modules/(?!react-leaflet)/\"",
     "eject": "react-scripts eject",
     "lint": "eslint --ignore-path .gitignore .",
     "format": "prettier --ignore-path .gitignore --write \"**/*.{ts,tsx,css,scss}\"",
@@ -58,10 +58,13 @@
     "husky": "^8.0.0",
     "lint-staged": "^13.1.0",
     "prettier": "^2.8.0"
-  }, 
+  },
   "lint-staged": {
-    "*.{ts,tsx}": ["eslint"],
-    "*.{ts,tsx, css, sccs}": ["prettier --write"]
-
+    "*.{js,jsx}": [
+      "eslint --fix"
+    ],
+    "*.{js,jsx, css}": [
+      "prettier --write"
+    ]
   }
 }

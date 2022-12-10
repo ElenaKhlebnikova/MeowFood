@@ -14,7 +14,7 @@ import Footer from "./components/layout/footer";
 import styles from "./App.module.css";
 const App = () => {
   const [cartIsShown, setCartIsShown] = useState(false);
-
+  console.log("Yahia is a horny girrrrrrrrllllll");
   return (
     <CartProvider>
       <BrowserRouter>

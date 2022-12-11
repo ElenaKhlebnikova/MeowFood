@@ -10,7 +10,14 @@ const useMealFetcher = (id) => {
       try {
         setIsLoading(true);
 
-        fetch(` https://meals-api-gnwsbsmsja-ew.a.run.app/api/meals/${id}`)
+        fetch(` https://meals-api-gnwsbsmsja-ew.a.run.app/api/meals/${id}`, {
+          method: "GET",
+
+          mode: "cors",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        })
           .then((res) => res.json())
           .then((data) => setData(data));
 

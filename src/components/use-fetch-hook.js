@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import axios from "axios";
 
 const useMealFetcher = (id) => {
   const [data, setData] = useState([]);
@@ -11,11 +10,10 @@ const useMealFetcher = (id) => {
       try {
         setIsLoading(true);
 
-        const response = await axios.get(
-          ` https://meals-api-gnwsbsmsja-ew.a.run.app/api/meals/${id}`
-        );
+        fetch(` https://meals-api-gnwsbsmsja-ew.a.run.app/api/meals/${id}`)
+          .then((res) => res.json())
+          .then((data) => setData(data));
 
-        setData(response.data);
         setIsLoading(false);
       } catch {
         setError(true);

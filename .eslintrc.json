@@ -15,7 +15,6 @@
   },
   "plugins": ["react", "react-hooks"],
   "rules": {
-    "process.env": false,
     "no-unused-vars": "warn",
     "react-hooks/exhaustive-deps": "off"
   }

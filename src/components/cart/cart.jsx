@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import styles from "./cart.module.css";
 import CartContext from "../context/cart-context";
-import CartItem from "./cart-item.jsx";
+import CartItem from "./cart-item";
 import PropTypes from "prop-types";
 
 const Cart = (props) => {

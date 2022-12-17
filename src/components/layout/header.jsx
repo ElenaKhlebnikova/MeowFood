@@ -3,7 +3,7 @@ import mainPic from "../../assets/MainPic.jpg";
 import mainPicSmall from "../../assets/MainPic_small.jpg";
 import mainPicMedium from "../../assets/MainPic_medium.jpg";
 // eslint-disable-next-line no-unused-vars
-import useMediaQueryHook, { SIZES } from "../use-media-query-hook";
+import { SIZES } from "../use-media-query-hook";
 import React from "react";
 
 const Header = () => {

@@ -18,6 +18,7 @@ function useMediaQueryHook() {
     if (width >= 1300) {
       setDevice(SIZES.BIG_DESKTOP);
     }
+
     if (width > 650 && width < 1300) {
       setDevice(SIZES.DESKTOP);
     }

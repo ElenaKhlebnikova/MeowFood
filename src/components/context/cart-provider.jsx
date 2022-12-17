@@ -1,4 +1,4 @@
-import CartContext from "../context/cart-context";
+import CartContext from "./cart-context";
 import React, { useReducer } from "react";
 import PropTypes from "prop-types";
 

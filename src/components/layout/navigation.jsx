@@ -3,7 +3,7 @@ import styles from "./navigation.module.css";
 import { Link } from "react-router-dom";
 import mainLogo from "./../../assets/meow-main-logo.png";
 import { BsList } from "react-icons/bs";
-import useMediaQueryHook, { SIZES } from "../media-query-hook";
+import useMediaQueryHook, { SIZES } from "../use-media-query-hook";
 
 const Navigation = () => {
   const height = window.innerHeight;

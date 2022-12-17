@@ -2,22 +2,21 @@ import styles from "./header.module.css";
 import mainPic from "../../assets/MainPic.jpg";
 import mainPicSmall from "../../assets/MainPic_small.jpg";
 import mainPicMedium from "../../assets/MainPic_medium.jpg";
-import mediaQuery from "./../media-query";
+// eslint-disable-next-line no-unused-vars
+import useMediaQueryHook, { SIZES } from "../use-media-query-hook";
 import React from "react";
 
 const Header = () => {
-  const smallDesktop = mediaQuery("(max-width: 900px, min-width: 500px)");
-  const mobile = mediaQuery("(max-width: 500px)");
-
   const picture = () => {
-    if (mobile) {
+    if (SIZES.BIG_DESKTOP) {
+      return mainPic;
+    }
+    if (SIZES.MOBILE) {
       return mainPicSmall;
     }
-    if (smallDesktop) {
+    if (SIZES.DESKTOP) {
       return mainPicMedium;
     }
-
-    return mainPic;
   };
 
   return (

@@ -12,6 +12,7 @@ import Rating from "./components/navigation-items/rating";
 import AboutUs from "./components/navigation-items/about-us";
 import Footer from "./components/layout/footer";
 import styles from "./App.module.css";
+
 const App = () => {
   const [cartIsShown, setCartIsShown] = useState(false);
 

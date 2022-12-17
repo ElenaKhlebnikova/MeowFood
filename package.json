@@ -52,8 +52,5 @@
     "*.{js,jsx, css}": [
       "prettier --write"
     ]
-  },
-  "msw": {
-    "workerDirectory": "public"
   }
 }

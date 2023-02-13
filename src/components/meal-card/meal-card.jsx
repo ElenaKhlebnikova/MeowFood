@@ -12,36 +12,37 @@ const MealCard = () => {
   const { id } = useParams();
 
   // extract data fetching, loading state and error handling into a custom hook called useMealFetcher
-
   const { data, error, isLoading } = useMealFetcher(id);
+  console.log(data);
+  const meal = data;
 
   const item = {
-    img: data.strMealThumb,
-    id: +data.idMeal,
-    name: data.strMeal,
-    area: data.strArea,
-    category: data.strCategory,
+    img: meal.strMealThumb,
+    id: +meal.idMeal,
+    name: meal.strMeal,
+    area: meal.strArea,
+    category: meal.strCategory,
     ingredients: Array(
-      data.strIngredient1,
-      data.strIngredient2,
-      data.strIngredient3,
-      data.strIngredient4,
-      data.strIngredient5,
-      data.strIngredient6,
-      data.strIngredient7,
-      data.strIngredient8,
-      data.strIngredient9,
-      data.strIngredient10,
-      data.strIngredient11,
-      data.strIngredient12,
-      data.strIngredient13,
-      data.strIngredient14,
-      data.strIngredient15,
-      data.strIngredient16,
-      data.strIngredient17,
-      data.strIngredient18,
-      data.strIngredient19,
-      data.strIngredient20
+      meal.strIngredient1,
+      meal.strIngredient2,
+      meal.strIngredient3,
+      meal.strIngredient4,
+      meal.strIngredient5,
+      meal.strIngredient6,
+      meal.strIngredient7,
+      meal.strIngredient8,
+      meal.strIngredient9,
+      meal.strIngredient10,
+      meal.strIngredient11,
+      meal.strIngredient12,
+      meal.strIngredient13,
+      meal.strIngredient14,
+      meal.strIngredient15,
+      meal.strIngredient16,
+      meal.strIngredient17,
+      meal.strIngredient18,
+      meal.strIngredient19,
+      meal.strIngredient20
     ),
   };
 

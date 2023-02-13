@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const useMealFetcher = (id) => {
+const useMealFetcher = (id, category, sortDirection, page) => {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(false);
@@ -10,16 +10,23 @@ const useMealFetcher = (id) => {
       try {
         setIsLoading(true);
 
-        fetch(` https://meals-api-gnwsbsmsja-ew.a.run.app/api/meals/${id}`, {
+        let url;
+        if (sortDirection !== "") {
+          url = `https://http-nodejs-production-94a3.up.railway.app/${id}?strCategory=${category}&sort=price,${sortDirection}&page=${page}&limit=6`;
+        } else {
+          url = `https://http-nodejs-production-94a3.up.railway.app/${id}?strCategory=${category}&page=${page}&limit=6`;
+        }
+        fetch(url, {
           method: "GET",
-
           mode: "cors",
           headers: {
             "Content-Type": "application/json",
           },
         })
           .then((res) => res.json())
-          .then((data) => setData(data));
+          .then((data) => {
+            setData(data.data.meals);
+          });
 
         setIsLoading(false);
       } catch {
@@ -30,8 +37,7 @@ const useMealFetcher = (id) => {
     };
 
     fetchData();
-  }, []);
-
+  }, [category, sortDirection, page]);
   return { data, error, isLoading };
 };
 

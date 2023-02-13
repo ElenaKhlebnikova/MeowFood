@@ -78,7 +78,7 @@ const ListOfMeals = () => {
             ""
           )}
           <p>{page}</p>
-          {data.length === 0 ? (
+          {data.length !== 0 ? (
             <button className={styles.btn} onClick={() => setPage(page + 1)}>
               &rarr;
             </button>

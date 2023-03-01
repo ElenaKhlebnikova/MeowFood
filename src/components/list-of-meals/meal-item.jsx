@@ -28,6 +28,7 @@ const MealItem = (props) => {
               Ingredients &rarr;
             </button>
           </Link>
+
           <p className={styles.price}>{props.price}$</p>
         </div>
       </div>

@@ -6,7 +6,7 @@ import { BsList } from "react-icons/bs";
 import useMediaQueryHook, { SIZES } from "../use-media-query-hook";
 
 const Navigation = () => {
-  const height = window.innerHeight;
+  // const height = window.innerHeight;
   const [menuIsOpen, setMenuIsOpen] = useState(false);
   const { device } = useMediaQueryHook();
 
@@ -15,13 +15,13 @@ const Navigation = () => {
       setMenuIsOpen(false);
     } else {
       setMenuIsOpen(true);
-      scroll();
+      // scroll();
     }
   };
 
-  const scroll = () => {
-    window.scrollTo({ top: height });
-  };
+  // const scroll = () => {
+  //   window.scrollTo({ top: height });
+  // };
 
   // const smallScreen = window.innerWidth <= 650;
   // const bigScreen = window.innerWidth > 650;
@@ -88,23 +88,17 @@ const Navigation = () => {
           </div>
           <div className={styles.navOption}>
             <Link to="/about">
-              <button onClick={scroll} className={styles.navBtn}>
-                Contact us
-              </button>
+              <button className={styles.navBtn}>Contact us</button>
             </Link>
           </div>
           <div className={styles.navOption}>
             <Link to="/meals">
-              <button onClick={scroll} className={styles.navBtn}>
-                Meals
-              </button>
+              <button className={styles.navBtn}>Meals</button>
             </Link>
           </div>
           <div className={styles.navOption}>
             <Link to="/rating">
-              <button onClick={scroll} className={styles.navBtn}>
-                Rating
-              </button>
+              <button className={styles.navBtn}>Rating</button>
             </Link>
           </div>
         </div>

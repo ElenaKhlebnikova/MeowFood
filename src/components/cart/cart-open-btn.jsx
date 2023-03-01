@@ -13,7 +13,11 @@ const CartBtnOpen = (props) => {
 
   return (
     <div className={styles.btnContainer}>
-      <button className={styles.btn} onClick={props.onClick}>
+      <button
+        className={styles.btn}
+        onClick={props.onClick}
+        data-testid="cart-btn"
+      >
         <svg
           className={styles.icon}
           xmlns="http://www.w3.org/2000/svg"

@@ -1,73 +1,57 @@
 /* eslint-disable no-undef */
 import React from "react";
-import { rest } from "msw";
-import { setupServer } from "msw/node";
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import ListOfMeals from "./list-of-meals";
 import { BrowserRouter } from "react-router-dom";
-const server = setupServer(
-  rest.get(
-    "https://meals-api-gnwsbsmsja-ew.a.run.app/api/meals/",
-    (req, res, ctx) => {
-      return res(
-        ctx.json([
-          {
-            strMeal: "Breakfast Potatoes",
-            strMealThumb:
-              "https://www.themealdb.com/images/media/meals/1550441882.jpg",
-            idMeal: "52965",
-            category: "Breakfast",
-            price: "12.50",
-          },
-          {
-            strMeal: "English Breakfast",
-            strMealThumb:
-              "https://www.themealdb.com/images/media/meals/utxryw1511721587.jpg",
-            idMeal: "52895",
-            category: "Breakfast",
-            price: "12.45",
-          },
-          {
-            strMeal: "Fruit and Cream Cheese Breakfast Pastries",
-            strMealThumb:
-              "https://www.themealdb.com/images/media/meals/1543774956.jpg",
-            idMeal: "52957",
-            category: "Breakfast",
-            price: "15.30",
-          },
-          {
-            strMeal: "Full English Breakfast",
-            strMealThumb:
-              "https://www.themealdb.com/images/media/meals/sqrtwu1511721265.jpg",
-            idMeal: "52896",
-            category: "Breakfast",
-            price: "25.00",
-          },
-        ])
-      );
-    }
-  )
-);
+import userEvent from "@testing-library/user-event";
+test("renders meals data", async () => {
+  render(<ListOfMeals />, { wrapper: BrowserRouter });
 
-beforeAll(() => server.listen());
-afterEach(() => server.resetHandlers());
-afterAll(() => server.close());
-
-test("it renders lists of meals", async () => {
-  render(
-    <BrowserRouter>
-      <ListOfMeals />
-    </BrowserRouter>
-  );
-  const meal_one = await screen.findByText("Breakfast Potatoes");
-  const meal_two = await screen.findByText("English Breakfast");
-  const meal_three = await screen.findByText(
+  const mealOne = await screen.findByText("Egg Drop Soup");
+  expect(mealOne).toBeInTheDocument();
+  const mealTwo = await screen.findByText(
     "Fruit and Cream Cheese Breakfast Pastries"
   );
-  const meal_four = await screen.findByText("Full English Breakfast");
-  expect(meal_one).toBeInTheDocument();
-  expect(meal_two).toBeInTheDocument();
-  expect(meal_three).toBeInTheDocument();
-  expect(meal_four).toBeInTheDocument();
+  expect(mealTwo).toBeInTheDocument();
+  const mealThree = await screen.findByText("Vegan Lasagna");
+  expect(mealThree).toBeInTheDocument();
+
+  screen.debug();
+});
+
+test("sorts meals correctly (Vegan)", async () => {
+  const user = userEvent.setup();
+  //find non-vegan meal
+
+  render(<ListOfMeals />, { wrapper: BrowserRouter });
+
+  const mealOne = await screen.findByText("Egg Drop Soup");
+  expect(mealOne).toBeInTheDocument();
+
+  // find dropdown with categories
+
+  const selctCategory = screen.getByRole("combobox");
+
+  expect(selctCategory).toBeInTheDocument();
+
+  const veganOption = screen.getByRole("option", { name: /vegan/i });
+  expect(veganOption.selected).toBeFalsy();
+  await user.selectOptions(selctCategory, [veganOption]);
+  expect(veganOption.selected).toBeTruthy();
+
+  screen.debug();
+  // make sure that the vegan dishes are rendered
+  const veganMealOne = await screen.findByText(
+    "Roast fennel and aubergine paella"
+  );
+  const veganMealTwo = await screen.findByText("Vegan Chocolate Cake");
+  const veganMealThree = await screen.findByText("Vegan Lasagna");
+
+  expect(veganMealOne).toBeInTheDocument();
+  expect(veganMealTwo).toBeInTheDocument();
+  expect(veganMealThree).toBeInTheDocument();
+  // make sure that non-vegan dishes are not rendered
+
+  expect(mealOne).not.toBeInTheDocument();
 });

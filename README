@@ -6,7 +6,7 @@ Welcome to the MeowFood project, an important step in my journey as a React deve
 https://dashing-cupcake-30c83a.netlify.app/
 
 This project is connected to my backend: https://github.com/ElenaKhlebnikova/api-meow-food 
-[url=https://ibb.co/v1GrLhN][img]https://i.ibb.co/jh2x3zC/image.png[/img][/url]
+
 ## Project Overview
 
 MeowFood represents a significant step in my React experience, serving as my first major project. The application enables users to explore a diverse range of meals, add them to a virtual cart, and effectively manage their selections. While the project does not incorporate a checkout function, it aims to offer an engaging and user-centric experience.

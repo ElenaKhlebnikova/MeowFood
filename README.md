@@ -13,7 +13,7 @@ MeowFood p is built with the following tech stack:
 | ------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
 | React                                     | Main framework for building the application         |
 | React Router                                    |Navigation and routing within the application |
-| CSS Modules                           | For styling the components and prevent clashing of classes.                                    |
+| CSS Modules                           | For styling the components and prevent clashing of classes                                    |
 | ESLint                                 | For formatting the code                                     |
 | Husky                              | To ensure only clean code is pushed to the repository                                        |
 | Leaflet                    | To show an interactive map                                    |
@@ -22,7 +22,7 @@ MeowFood p is built with the following tech stack:
 
 ## 👀 Project Overview
 
-Click  [here](https://dashing-cupcake-30c83a.netlify.app/meals) to view the project.
+Click  [here](https://dashing-cupcake-30c83a.netlify.app) to view the project.
 
 ## 🐈 Features 
 

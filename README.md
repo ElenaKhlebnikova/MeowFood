@@ -41,4 +41,5 @@ Click  [here](https://dashing-cupcake-30c83a.netlify.app) to view the project.
 4. How to use RTL to write integration tests that span multiple components.
 5. Experimented with TDD.
 6. Using ReactHooks (including useReducer, useContext).
+7. Building custom hook to share meal fetching logic between the components.
 

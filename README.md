@@ -27,10 +27,10 @@ Click  [here](https://dashing-cupcake-30c83a.netlify.app) to view the project.
 
 
 ![MeowFood](https://i.ibb.co/jh2x3zC/image.png)
-![MeowFood contact us page](https://i.ibb.co/tzhkvdL/image.png)
-![MeowFood meals](https://i.ibb.co/t22SD2B/image.png)
-![MeowFood meal ingredient prieview](https://i.ibb.co/QHmQqyd/image.png)
-![MeowFood comment section](https://i.ibb.co/M8Cyk8S/image.png)
+![MeowFood contact us page](https://i.ibb.co/CwNcX77/image.png)
+![MeowFood meals](https://i.ibb.co/6ysYjCp/image.png)
+![MeowFood meal ingredient prieview](https://i.ibb.co/LgdRjpS/image.png)
+![MeowFood comment section](https://i.ibb.co/Jmbf2df/image.png)
 ![MeowFood cart](https://i.ibb.co/7rr7yTK/image.png)
 
 

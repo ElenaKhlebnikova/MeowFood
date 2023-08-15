@@ -1,68 +1,44 @@
-# MeowFood Project
+# 🍽️ MeowFood
 
-Welcome to the MeowFood project, an important step in my journey as a React developer. This project highlights my skills in creating dynamic web applications, demonstrating proficiency in key front-end technologies.
-
-
-https://dashing-cupcake-30c83a.netlify.app/
-
-This project is connected to my backend: https://github.com/ElenaKhlebnikova/api-meow-food 
-
-## Project Overview
-
-MeowFood represents a significant step in my React experience, serving as my first major project. The application enables users to explore a diverse range of meals, add them to a virtual cart, and effectively manage their selections. While the project does not incorporate a checkout function, it aims to offer an engaging and user-centric experience.
-
-## Key Features
-
-- **Cart Functionality:** MeowFood introduces an intuitive cart system, enabling users to seamlessly add and remove items. The cart icon provides real-time updates of the selected items.
-
-- **Meal Exploration:** Users have the opportunity to browse a variety of meals, each accompanied by detailed descriptions and captivating visuals.
-
-- **User Interaction:** MeowFood facilitates user engagement by allowing them to leave comments and ratings on the feedback page.
-
-- **API Integration:** The project is integrated with a custom API I developed. This API acts as a backend to store meal data, comments, and ratings. This integration demonstrates my ability to connect front-end and backend functionalities.
-
-## Notable Elements
-
-- **Technical Proficiency:** MeowFood underscores my grasp of fundamental React concepts, including state management, component-based architecture, and user interface design.
-
-- **Responsive Design:** The project prioritizes responsive web design principles, ensuring optimal user experiences across various devices and screen sizes.
-
-- **Original API:** The integration with my self-built API reflects my capabilities in creating and managing data endpoints, adding complexity and depth to the project's technical landscape.
-
-- **Test Coverage and Order Phase Tests:** The project incorporates a comprehensive test suite to ensure the reliability and stability of the application. This includes testing user interactions, components, and user flows. Notably, order phase tests are designed to validate critical process of ordering.
+Welcome to MeowFood repository! This is an application which allows users to view different meals, add and remove them from the cart. 
 
 
-## Tech Stack
+The project is connected to the backend that I've built: https://github.com/ElenaKhlebnikova/meow-food-backend
 
-- **React:** The project's foundation is built upon React, a powerful JavaScript library for building user interfaces. React enables the creation of reusable components and facilitates the management of dynamic UI elements.
+## 🏗️ Tech Stack
 
-- **React Router v6:** For robust navigation and routing within the application, React Router version 6 is utilized. This version introduces enhanced features for declarative routing and nested navigation structures.
+MeowFood p is built with the following tech stack:
 
-- **CSS Modules:** Styling is organized using CSS Modules, offering encapsulated and scoped styles. This approach prevents style clashes and promotes consistent design throughout the application.
+| Technology                                                          | Usage                                                                                                          |
+| ------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| React                                     | Main framework for building the application         |
+| React Router                                    |Navigation and routing within the application |
+| CSS Modules                           | For styling the components and prevent clashing of classes.                                    |
+| ESLint                                 | For formatting the code                                     |
+| Husky                              | To ensure only clean code is pushed to the repository                                        |
+| Leaflet                    | To show an interactive map                                    |
+| React Testing Library                                   | For testing the application                                           |
+                                                              
 
-- **ESLint:** The project adheres to coding standards and best practices with the help of ESLint. This tool identifies and rectifies potential code issues, ensuring code quality and readability.
+## 👀 Project Overview
 
-- **Husky:** Husky is integrated into the project to maintain code integrity through Git hooks. It enables pre-commit and pre-push checks, ensuring that only clean and error-free code is committed to the repository.
+Click  [here](https://dashing-cupcake-30c83a.netlify.app/meals) to view the project.
 
-- **React Testing Library:** To ensure the application's robustness, React Testing Library is utilized. This library provides a suite of tools for writing tests that simulate user interactions, allowing for comprehensive testing of components and user flows.
+## 🐈 Features 
 
-
-- **Leaflet:** The project incorporates Leaflet, a widely-used JavaScript library for interactive maps. Leaflet allows for the integration of maps and geospatial data, enhancing the user experience and adding a dynamic visual element.
-
-
-
-## Things I Learned
-The journey of developing MeowFood has been a valuable learning experience:
-
-- **React Hooks:** I gained proficiency in utilizing various React Hooks, including useState, useEffect, useReducer, and useContext. These Hooks played a pivotal role in managing state, handling side effects, and effectively organizing the application's logic.
-
-- **React Router Implementation:** MeowFood provided an excellent platform for me to understand and implement React Router for navigation and routing. This improved the user experience and added a seamless flow to the application.
-
-- **Testing Strategies and React Testing Library:** Developing the project's extensive test suite, including order phase tests, enhanced my understanding of testing methodologies and the effective use of React Testing Library.
+1. Responsive design.
+2. Cart in which user cann add items and remove them. 
+3. Rating and comment section.
+4. Filtering meals by their type. 
+5. Sorting meals based on their price. 
 
 
-
-## Contact
-
-For inquiries or discussions, you can reach me via email at [khlebnikova.elena.s@gmail.com](mailto:khlebnikova.elena.s@gmail.com).
+## 📖What I have learnt
+1. Using React Router v.6 to implement navigation between different pages.
+2. Using Leaflet to display an interactive map and also changing the default pin to a custom one.
+3. Connecting front end and backend using `fetch` and how to work with common HTTP methods.
+4. How to use React Testing Library to test components of the application.
+5. How to write a test phase.
+6. Red/green testing.
+7. Using ReactHooks (useState, useEffect, useReducer, useContext).
 

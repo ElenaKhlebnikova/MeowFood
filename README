@@ -1,1 +1,60 @@
+# MeowFood Project
+
+Welcome to the MeowFood project, an important step in my journey as a React developer. This project highlights my skills in creating dynamic web applications, demonstrating proficiency in key front-end technologies.
+
+
 https://dashing-cupcake-30c83a.netlify.app/
+
+This project is connected to my backend: https://github.com/ElenaKhlebnikova/api-meow-food 
+
+
+## Project Overview
+
+MeowFood represents a significant step in my React experience, serving as my first major project. The application enables users to explore a diverse range of cat meals, add them to a virtual cart, and effectively manage their selections. While the project does not incorporate a checkout function, it aims to offer an engaging and user-centric experience.
+
+## Key Features
+
+- **Cart Functionality:** MeowFood introduces an intuitive cart system, enabling users to seamlessly add and remove items. The cart icon provides real-time updates of the selected items.
+
+- **Meal Exploration:** Users have the opportunity to browse a variety of cat meals, each accompanied by detailed descriptions and captivating visuals.
+
+- **User Interaction:** MeowFood facilitates user engagement by allowing them to leave comments and ratings on the meals they've sampled. This feature adds a social layer to the application, enhancing its interactivity.
+
+- **API Integration:** The project is integrated with a custom API I developed. This API acts as a backend to store meal data, comments, and ratings. This integration demonstrates my ability to connect front-end and backend functionalities.
+
+## Notable Elements
+
+- **Technical Proficiency:** MeowFood underscores my grasp of fundamental React concepts, including state management, component-based architecture, and user interface design.
+
+- **Responsive Design:** The project prioritizes responsive web design principles, ensuring optimal user experiences across various devices and screen sizes.
+
+- **Original API:** The integration with my self-built API reflects my capabilities in creating and managing data endpoints, adding complexity and depth to the project's technical landscape.
+
+- **Test Coverage and Order Phase Tests:** The project incorporates a comprehensive test suite to ensure the reliability and stability of the application. This includes testing user interactions, components, and user flows. Notably, order phase tests are designed to validate critical processes, enhancing the project's overall quality and user satisfaction.
+
+
+# Tech Stack
+
+The MeowFood project is built upon a carefully selected tech stack, combining modern tools and frameworks to ensure efficient development, maintainable code, and a seamless user experience. The following technologies are employed in crafting this application:
+
+- **React:** The project's foundation is built upon React, a powerful JavaScript library for building user interfaces. React enables the creation of reusable components and facilitates the management of dynamic UI elements.
+
+- **React Router v6:** For robust navigation and routing within the application, React Router version 6 is utilized. This version introduces enhanced features for declarative routing and nested navigation structures.
+
+- **CSS Modules:** Styling is organized using CSS Modules, offering encapsulated and scoped styles. This approach prevents style clashes and promotes consistent design throughout the application.
+
+- **ESLint:** The project adheres to coding standards and best practices with the help of ESLint. This tool identifies and rectifies potential code issues, ensuring code quality and readability.
+
+- **Husky:** Husky is integrated into the project to maintain code integrity through Git hooks. It enables pre-commit and pre-push checks, ensuring that only clean and error-free code is committed to the repository.
+
+- **React Testing Library:** To ensure the application's robustness, React Testing Library is utilized. This library provides a suite of tools for writing tests that simulate user interactions, allowing for comprehensive testing of components and user flows.
+
+
+
+## Contact
+
+For inquiries or discussions, you can reach me via email at [khlebnikova.elena.s@gmail.com](mailto:khlebnikova.elena.s@gmail.com).
+
+---
+
+Embark on a culinary exploration for feline companions with MeowFood. This project exemplifies my commitment to delivering impactful user experiences while providing room for ongoing growth and refinement in my development skills. Your engagement is instrumental in shaping the continual evolution of this project.

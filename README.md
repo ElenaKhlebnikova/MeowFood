@@ -16,7 +16,6 @@ MeowFood is built with the following tech stack:
 | React Router                                    |Navigation and routing within the application |
 | CSS Modules                           | For styling the components and prevent clashing of classes                                    |
 | ESLint/Prettier/Husky                                 | For linting/formatting/Git-hooks                                      |
-                                                           
 | Leaflet                    | To show an interactive map on the "Contact Us" page                                 |
 | Jest & RTL                                  | To write unit and integration tests                                          |
                                                               

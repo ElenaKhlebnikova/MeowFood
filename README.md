@@ -31,7 +31,7 @@ Click  [here](https://dashing-cupcake-30c83a.netlify.app) to view the project.
 ![MeowFood meals](https://i.ibb.co/t22SD2B/image.png)
 ![MeowFood meal ingredient prieview](https://i.ibb.co/QHmQqyd/image.png)
 ![MeowFood comment section](https://i.ibb.co/M8Cyk8S/image.png)
-![MeowFood cart](https://i.ibb.co/qmmb14p/image.png)
+![MeowFood cart](https://i.ibb.co/7rr7yTK/image.png)
 
 
 

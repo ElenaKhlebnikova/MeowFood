@@ -12,9 +12,9 @@ const useMealFetcher = (id, category, sortDirection, page) => {
 
         let url;
         if (sortDirection !== "") {
-          url = `https://meow-food-api.onrender.com/${id}?strCategory=${category}&sort=price,${sortDirection}&page=${page}&limit=6`;
+          url = `https://momentous-quill-production.up.railway.app/${id}?strCategory=${category}&sort=price,${sortDirection}&page=${page}&limit=6`;
         } else {
-          url = `https://meow-food-api.onrender.com/${id}?strCategory=${category}&page=${page}&limit=6`;
+          url = `https://momentous-quill-production.up.railway.app/${id}?strCategory=${category}&page=${page}&limit=6`;
         }
         fetch(url, {
           method: "GET",
